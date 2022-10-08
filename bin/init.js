@@ -9,7 +9,7 @@ const program = new Command()
 program
   .command('init [destination]')
   .description('Initialize a repository')
-  .option('-m, --mode', 'Which Symbols to install (domql, react)')
+  .option('-m, --mode', 'Your framework (domql, react)')
   .action(async (mode) => {
     const packageName = `@symbo.ls/${mode || 'uikit'}`
     console.log('Adding', chalk.green.bold(packageName))
